@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex8</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color:black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+			color: orange;
+        }
+
+       </style>
+</head>
+<body>
+<h1> Ex8=Sequencia de Fibonacci</h1>
+<p> Número: <input type="text" id="numero"></p>
+<p> <input type="button" id="botao" value="Teste" onclick="ex8()">
+</p>
+<p id="fibo"></p>
+<p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+<script>
+ function ex8() {
+  var num = Number(document.all['numero'].value);
+  var numero = 0;
+  var next = 1;
+  var aux;
+  document.all['fibo'].textContent ="";
+  for (var i =1; i <= num; i++) {
+  document.all['fibo'].textContent += numero + " ";
+  aux = next;
+  next = next + numero;
+  numero = aux;
+  }
+ }
+</script>
+</body>
+</html>

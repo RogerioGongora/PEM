@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex7</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color: black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+            color: orange;
+
+        }
+       </style>
+       </head>
+       <body>
+        <h1> Ex7=Primo ou não</h1>
+        <p>Número: <input type="text" id="numero"><br>
+        <input type="button" id="botao" value="teste" onclick="ex7()"></p>   
+        <p id="primo"></p>
+        <p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+        <script>
+        function ex7(){
+        var num = Number(document.all['numero'].value);
+        if (num==2||num==3||num==5||num==7) {
+        document.all["primo"].textContent = "O número é primo: " + num;  
+        }
+        else if (num%2==0||num%3==0||num%5==0||num%7==0||num==1) {
+        document.all['primo'].textContent = "O número não é primo: " + num;  
+        }
+        else{
+        document.all['primo'].textContent = "O número é primo: " + num;
+        }
+        }
+        </script>
+        </body>
+        </html>

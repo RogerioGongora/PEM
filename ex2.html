@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex2</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+        
+        #botao{
+            color: white;
+            background-color: black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        #nota1,#nota2,#nota3{
+            background-color: black;
+            color: orange;
+        }
+       </style>
+</head>
+<body>
+<h1> Ex2=Média ponderada</h1>
+<p> Trabalho Prático: <input type="text" id="nota1"><br>
+	Avaliação semestral: <input type="text" id="nota2"><br>
+	Exame Final: <input type="text" id="nota3"><br>
+    <input type="button" value="teste" id="botao" onclick="ex2()"><br>
+    </p>
+    <p id="mp"></p>
+    <p id="conceito"></p>
+    <p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+    <script>
+    	function ex2(){
+    		var n1 = Number(document.all['nota1'].value);
+    		var n2 = Number(document.all['nota2'].value);
+    		var n3 = Number(document.all['nota3'].value);
+    		var media = (n1*0.2)+(n2*0.3)+(n3*0.5);
+    		document.all["mp"].textContent="A média do aluno é " + media.toFixed(2);
+    		if (media>=8) {
+    			document.all["conceito"].textContent= "Conceito A";
+    		}
+    		else if (media<8 && media>=7) {
+    			document.all["conceito"].textContent= "Conceito B";
+    		}
+    		else if (media<7 && media>=6){
+    			document.all["conceito"].textContent= "Conceito C";
+    		}
+    		else if (media<6 && media>=5){
+    			document.all["conceito"].textContent= "Conceito D";
+    		}
+    		else{
+    			document.all["conceito"].textContent= "Conceito E";
+    		}
+    		
+            }
+    </script>
+</body>
+</html>

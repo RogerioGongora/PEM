@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex11</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color:black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+			color: orange;
+        }
+
+       </style>
+</head>
+<body>
+<h1> Ex11=Números positivos e negativos</h1>
+<p> <input type="button" id="botao" value="Start" onclick="ex11()"></p>
+<p id="resp"></p>
+<p id="resp2"></p>
+<p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+<script>
+function ex11(){
+ var vet1 = [];
+ var vet2 = [];
+ var vet3 = [];
+ var i2 = 0;
+ var i3 = 0;
+ for (var i = 0; i<8; i++) {
+  vet1[i] = Number(prompt("Entre com os 8 números"));
+  if (vet1[i]>=0) {
+   vet2[i2] = vet1[i];
+   i2++ 
+  }
+  else{
+  vet3[i3] = vet1[i];
+  i3++  
+  }
+  }
+  document.all['resp'].textContent = "Positivos " + vet2.join();
+  document.all['resp2'].textContent = "Negativos " + vet3.join();
+} 
+</script>
+</body>
+</html>

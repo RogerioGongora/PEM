@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex14</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color:black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+			color: orange;
+        }
+
+       </style>
+</head>
+<body>
+<h1> Ex14=Ordene os números </h1>
+<p> <input type="button" id="botao" value="Start" onclick="ex14()"></p>
+<p id="resposta1"></p>
+<p id="resposta2"></p>
+<p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+<script>
+  function ex14(){
+ var resp1 = document.all['resposta1'];
+ var resp2 = document.all['resposta2'];
+ var n1 = [];
+ var n2 = [];
+ cont = 0;
+ cont2 = 0;
+
+ for (var x = 0; x < 20; x++) {
+   n1[x] = Number(prompt("Digite o número"));
+ }
+ resp1.innerHTML = " Vetor em desordem " + n1.join() + "<br>";
+ for (var x = 0; x<20; x++) {
+   for (var i = 0; i < 20; i++) {
+     if (n1[x] < n1[i]) {
+      cont2 = cont2 + 1; 
+     }
+     else{
+       cont = cont + 1;
+     }
+   }
+  n2[cont] = n1[x];
+  cont = 0;
+ }
+ resp2.innerHTML = "Vetor em ordem crescente: " + n2.join() + "<br>";
+  }
+</script>
+</body>
+</html>

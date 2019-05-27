@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex15</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color:black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+			color: orange;
+        }
+
+       </style>
+</head>
+<body>
+<h1> Ex15=Quantos números se repetiram? </h1>
+<p> <input type="button" id="botao" value="Start" onclick="ex15()"></p>
+<p id="resp"></p>
+<p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+<script>
+ function ex15(){
+ var num = [];
+ var cont = 0;
+ var i = 0;
+ do{
+ num[i] = Number(prompt("Entre com os números"));
+  i = i+1;
+ }
+ while(num[i-1]!=0 && i!=100);
+ if (num[i-1]==0) {
+ for (var rep = 0; rep < i; rep++) {
+ if (num[i-2]==num[rep]) {
+ cont = cont + 1;  
+ }
+ }
+}
+else {
+for (var rep = 0; rep < i; rep++) {
+ if (num[i-1]==num[rep]) {
+ cont = cont + 1; 
+}
+}
+}
+document.all['resp'].textContent = cont-1 + " Números repetidos "; 
+}
+</script>
+</body>
+</html>

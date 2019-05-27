@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex12</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color:black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+			color: orange;
+        }
+
+       </style>
+</head>
+<body>
+<h1> Ex12=Números superiores a 50 </h1>
+<p> <input type="button" id="botao" value="Start" onclick="ex12()"></p>
+<p id="resp"></p>
+<p id="resp2"></p>
+<p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+<script>
+function ex12(){
+var vet1 = [];
+var cont = 0;
+for (var i = 0; i < 8; i++) {
+vet1[i]= Number(prompt("Entre com os números"));
+}
+document.all['resp'].innerHTML = "";
+for (var i = 0; i < 8; i++) {
+if (vet1[i]>50) {
+document.all['resp'].innerHTML += "Posição " + i + "°" + vet1[i] + "<br>";
+}
+else{
+ cont = cont+1; 
+}
+ }
+ if (cont == 8) {
+ document.all['resp2'].textContent = "Nenhum é maior que 50 "; 
+ }
+ } 
+</script>
+</body>
+</html>

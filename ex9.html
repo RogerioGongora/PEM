@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex9</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color:black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+			color: orange;
+        }
+
+       </style>
+</head>
+<body>
+<h1> Ex9=Adega de vinhos</h1>
+<p> <input type="button" id="botao" value="Start" onclick="ex9()"></p>
+<p id="resp"></p>
+<p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+<script>
+  function ex9(){
+   var cont1 = 0;
+   var cont2 = 0;
+   var cont3 = 0; 
+  for (var i =1; i <= 50; i++) {
+  var num = Number(prompt("Escolha entre as opções de vinho: 1-Tinto, 2-Branco, 3-Rose"));
+  if (num == 1) {
+    cont1 = cont1 + 1; 
+  }
+  else if (num==2) {
+    cont2 = cont2+1; 
+  }
+  else
+   cont3 = cont3 + 1;
+  }
+  var c1 = cont1/50*100;
+  var c2 = cont2/50*100;
+  var c3 = cont3/50*100;
+  document.all['resp'].textContent = "As porcentagens são " + c1+ "% " + c2+ "% " + c3 + "%";
+  }
+</script>

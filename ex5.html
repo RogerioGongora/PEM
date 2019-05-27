@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex5</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color: black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+            color: orange;
+
+        }
+       </style>
+</head>
+<body>
+<h1> Ex5=Escolha 1 ou 2</h1>
+<p> Opção 1.Somar 2 números<br>
+    Opção 2.Raiz quadrada de um número<br>
+</p>
+    <select id="escolha" onchange="ocultaCampo()">
+    	<option>1</option>
+    	<option>2</option>
+    </select><br>
+	Numero 1: <input type="text" id="numero1"><br>
+	<span id="num2">Numero 2: <input type="text" id="numero2"></span><br>
+    <input type="button" value="teste" id="botao" onclick="ex7()"><br>
+    <p id="resposta"></p>
+    <p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+    <script>
+    	function ex7() {
+    	var esco = document.all['escolha'].value;
+    	var n1 = Number(document.all['numero1'].value);
+    	var n2 = Number(document.all['numero2'].value);
+    	var soma = n1+n2;
+    	if (esco =="1") {
+    		document.all['resposta'].textContent= "A soma é " + soma; 
+    	}
+    	else{
+    		
+    		document.all['resposta'].textContent= "A raiz quadrada é " + Math.sqrt(n1);
+    	}
+		   }
+		   function ocultaCampo(){
+		   	var esco = document.all['escolha'].value;
+            if (esco=="2") {
+		   	document.all['num2'].style.display= 'none';
+            }
+            else {
+            	document.all['num2'].style.display= 'inline';
+            }
+
+		   }
+    </script>
+</body>
+</html>
+

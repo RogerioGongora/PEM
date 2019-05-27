@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex10</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color: black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+            color: orange;
+
+        }
+       </style>
+       </head>
+       <body>
+        <h1> Ex10=Fatorial</h1>
+        <p>Número: <input type="text" id="numero"><br>
+        <input type="button" id="botao" value="teste" onclick="ex10()"></p>   
+        <p id="fat"></p>
+        <p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+        <script>
+        function ex10(){
+        var fatorial = Number(document.all['numero'].value);
+        for (var i = (fatorial-1); i>1; i--) { 
+        fatorial = fatorial * i;
+        }
+        document.all['fat'].textContent = "Fatorial é: " + fatorial;
+        }
+        </script>
+        </body>
+        </html>

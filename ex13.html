@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex13</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color:black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+			color: orange;
+        }
+
+       </style>
+</head>
+<body>
+<h1> Ex13=Par+5 ou ímpar*5 </h1>
+<p> <input type="button" id="botao" value="Start" onclick="ex13()"></p>
+<p id="resp"></p>
+<p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+<script>
+ function ex13() {
+ var vet1 = [];
+ document.all["resp"].innerHTML = "";
+ for (var i = 0; i < 10; i++) {
+ vet1[i] = Number(prompt("Entre com os números"));
+ if (vet1[i] % 2 == 0) {
+ vet1[i] = vet1[i] + 5; 
+ }
+ else{
+ vet1[i] = vet1[i] * 5;
+ } 
+ }
+ document.all["resp"].innerHTML += vet1.join();
+}
+
+</script>
+</body>
+</html>

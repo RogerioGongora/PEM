@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex3</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color: black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        #num1,#num2,#num3{
+            background-color: black;
+            color: orange;
+        }
+       </style>
+</head>
+<body>
+<h1> Ex3=Ordem crescente</h1>
+<p> Numero1: <input type="text" id="num1"><br>
+	Numero2: <input type="text" id="num2"><br>
+	Numero3: <input type="text" id="num3"><br>
+    <input type="button" value="teste" id="botao" onclick="ex5()"><br>
+    </p>
+    <p id="ordem"></p>
+    <p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+    <script>
+    	function ex5(){
+    	var n1 = Number(document.all['num1'].value);
+    	var n2 = Number(document.all['num2'].value);
+    	var n3 = Number(document.all['num3'].value);
+    	if (n1>n2&&n1>n3&&n2>n3) {
+       	document.all['ordem'].textContent= "A ordem crescente é  " +n3 +"," +n2 +"," +n1;
+    	}
+    	else if (n1>n2&&n1>n3&&n3>n2){
+    		document.all['ordem'].textContent= "A ordem crescente é  " +n2 +"," +n3 +"," +n1;
+    	}
+    	else if (n2>n1&&n2>n3&&n1>n3){
+    		document.all['ordem'].textContent= "A ordem crescente é  " +n3 +"," +n1 +"," +n2;
+    	}
+    	else if (n2>n1&&n2>n3&&n3>n1){
+    		document.all['ordem'].textContent= "A ordem crescente é  " +n1 +"," +n3 +"," +n2;
+    	}
+    	else if (n3>n1&&n3>n2&&n1>n2){
+    		document.all['ordem'].textContent= "A ordem crescente é  " +n2 +"," +n1 +"," + n3;
+    	}
+    	else if (n3>n1&&n3>n2&&n2>n1){
+    		document.all['ordem'].textContent= "A ordem crescente é " +n1 +"," +n2 +"," +n3;
+    	}
+    	else{
+    		document.all['ordem'].textContent= "Algum dos números são repetidos, por favor troque-os. "
+    	}
+    }
+    </script>
+</body>
+</html>
+    

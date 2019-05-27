@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex6</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 600px;
+        }
+       
+        #botao{
+            color: white;
+            background-color: black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+            color: orange;
+
+        }
+       </style>
+       </head>
+       <body>
+        <h1> Ex6=Salário</h1>
+       <p><input type="button" id="botao" value="teste" onclick="ex6()"></p>   
+        <p id="ns"></p>
+        <p id="exem"></p>
+        <p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+        <script>
+
+        function ex6(){         
+            document.all['ns'].innerHTML =  "";
+            for (var i = 1; i<=25; i++) {
+            var salario = Number(prompt("Digite salário"));
+            if (salario<=500) {
+            salario = salario+(salario*0.05)+150;
+            document.all['ns'].innerHTML += "Novo salário é " + salario + "<br>"; 
+            }
+            else if (salario>=500.01 && salario <=600) {
+                salario = salario+(salario*0.12)+150;
+                document.all['ns'].innerHTML += "Novo salário é " + salario + "<br>";
+                }
+                else if (salario>=600.01 && salario <=1200){
+                    salario = salario+(salario*0.12)+100;
+                document.all['ns'].innerHTML += "Novo salário é " + salario + "<br>"; 
+                }
+                else if (salario>1200){
+                    salario = salario+100;
+                document.all['ns'].innerHTML += "Novo salário é " + salario + "<br>";
+                }
+            }
+        }
+        </script>
+         </body>
+         </html>

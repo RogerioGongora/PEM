@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 1</title>
+<style>
+ body{ 
+   background-color: lightblue;
+   color: black;
+   border-style: solid;
+   border-color: black;
+   height: 450px;
+ }
+ #b,#c,#a{
+     background-color: black;
+     color: orange;
+     font-style:inherit;
+ }
+ h1{
+     color: black;
+ }
+ #botao{
+     color: white;
+     background-color: black;
+     height: 50px;
+     margin-top: 0px;
+     
+ }
+</style>
+
+</head>
+<body>
+    <h1>Ex1=Bhaskara</h1>
+    <h2>Calcular baskara</h2>
+    <div>
+   Entre com o A: <input type="text" id="a"><br><br>
+   Entre com o B: <input type="text" id="b"><br><br>
+   Entre com o C: <input type="text" id="c"><br><br>
+</div>
+  <p> <input type="button" id="botao" value="Calcular" onclick="exercicio1()"></p>
+   <p id="delta"></p>
+   <p id="raiz1"></p>
+   <p id="raiz2"></p>
+
+   <p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+
+   <script>
+   function exercicio1(){
+   var a = Number(document.all['a'].value);
+   var b = Number(document.all['b'].value);
+   var c = Number(document.all['c'].value);
+   var delta = (b*b)-4*(a*c)
+   if(delta<0){
+   document.all['raiz1'].textContent = "Não há raizes reais.";
+   document.all['raiz2'].style.display= 'none';
+   document.all['delta'].style.display= 'none';
+   }
+   else if(delta==0){
+    document.all['raiz1'].textContent = "Há 1 raiz real : " + (-b + + Math.sqrt(delta))/2*a;
+    document.all['raiz2'].style.display= 'none';
+    document.all['delta'].style.display= 'none';
+   }
+   else {
+    document.all['raiz2'].style.display= 'inline';
+   document.all['delta'].style.display= 'inline';
+   document.all['delta'].textContent = "Delta é igua a : " + delta;
+   document.all['raiz1'].textContent = "Raiz 1 é igual a : " + (-b + + Math.sqrt(delta))/2*a;
+   document.all['raiz2'].textContent = "Raiz 2 é igual a : " + (-b + - Math.sqrt(delta))/2*a;
+   }
+   }
+   
+   </script>
+
+</body>
+</html>

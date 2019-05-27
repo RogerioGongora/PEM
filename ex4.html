@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+    <title>ex4</title>
+    <style>
+        body{ 
+          background-color: lightblue;
+          color: black;
+          border-style: solid;
+          border-color: black;
+          height: 300px;
+        }
+       
+        #botao{
+            color: white;
+            background-color:black;
+            height: 50px;
+            margin-top: 0px;
+            
+        }
+        h1{
+            color: black;
+        }
+        input{
+            background-color: black;
+			color: orange;
+        }
+
+       </style>
+</head>
+<body>
+<h1> Ex4=Qual data é maior</h1>
+
+<p> Data 1: <input placeholder="Dia" type="text" id="dia1"> / <input placeholder="Mês" type="text" id="mes1"> / <input placeholder="Ano" type="text" id="ano1"><br>
+	Data 2: <input placeholder="Dia" type="text" id="dia2"> / <input placeholder="Mês" type="text" id="mes2"> / <input placeholder="Ano" type="text" id="ano2"><br>
+</p>
+
+    <input type="button" value="teste" id="botao" onclick="ex6()"><br>
+    <p id="ordem"></p>
+    <p><a href="https://gongora10.000webhostapp.com/" id="voltar">Retornar</a></p>
+
+    <script>
+    	function ex6(){
+    	var d1 = Number(document.all['dia1'].value);
+    	var d2 = Number(document.all['dia2'].value);
+    	var m1 = Number(document.all['mes1'].value);
+    	var m2 = Number(document.all['mes2'].value);
+    	var a1 = Number(document.all['ano1'].value);
+    	var a2 = Number(document.all['ano2'].value);
+    	if (a1>a2) {
+    		document.all['ordem'].textContent= "Data 1 é maior "+d1 +"/" +m1 +"/" +a1;
+    	}
+    	else if (a2>a1) {
+    		document.all['ordem'].textContent="Data 2 é maior " +d2 +"/" +m2 +"/" +a2;
+    	}
+    	else if (m1>m2) {
+    		document.all['ordem'].textContent="Data 1 é maior " +d1 +"/" +m1 +"/" +a1;
+    	}
+    	else if (m2>m1) {
+    		document.all['ordem'].textContent="Data 2 é maior " +d2 +"/" +m2 +"/" +a2;
+    	}
+    	else if (d1>d2) {
+    		document.all['ordem'].textContent="Data 1 é maior " +d1 +"/" +m1 +"/" +a1;
+    	}
+    	else if (d2>d1) {
+    		document.all['ordem'].textContent="Data 2 é maior " +d2 +"/" +m2 +"/" +a2;
+    	}
+    	else{
+    		document.all['ordem'].textContent="Não digite datas iguais.";
+    	}
+
+    }
+    </script>
+</body>
+</html>
+    
